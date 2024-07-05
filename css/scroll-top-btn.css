@@ -1,0 +1,20 @@
+.scroll-top {
+  height: 4em;
+  width: 4em;
+  position: fixed;
+  bottom: 1.5em;
+  left: 1.5em;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0px 0px 25px 10px rgba(28, 28, 28, 0.25);
+  transform: scale(0);
+  transition: transform 0.25s;
+  cursor: pointer;
+  background-image: url("../assets/top-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.scroll-top-visible {
+  transform: scale(1);
+}
