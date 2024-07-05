@@ -18,11 +18,13 @@ let isHidden = false;
  * Start Helper Functions
  */
 
+// remove hidden state class from the navbar class list
 const removeHiddenState = () => {
   navbar.classList.remove("hidden");
   clearTimeout(timeout);
 };
 
+// highlight the current section's nav item
 const setActiveNavItem = (sectionId) => {
   const navItems = document.querySelectorAll(".nav-item");
   navItems.forEach((item) => {
@@ -39,6 +41,7 @@ const setActiveNavItem = (sectionId) => {
   }
 };
 
+// highlight the current active section
 const setActiveSection = (section, viewPort) => {
   section.classList.remove("section-active");
   if (viewPort < 150 && viewPort >= -150) {
@@ -47,10 +50,12 @@ const setActiveSection = (section, viewPort) => {
   }
 };
 
+// show the sctoll top button
 const setScrollTopVisible = (scrollTopBtn) => {
   scrollTopBtn.classList.add("scroll-top-visible");
 };
 
+// hide the scroll top button
 const setScrollTopInvisible = (scrollTopBtn) => {
   scrollTopBtn.classList.remove("scroll-top-visible");
 };
@@ -119,6 +124,7 @@ navItems.forEach((item) => {
   });
 });
 
+// scroll top button handler
 const scrollTopBtnHandler = () => {
   const scroll = window.scrollY;
 
@@ -133,7 +139,6 @@ const scrollTopBtnHandler = () => {
 /**
  * End Main Functions
  * Begin Events
- *
  */
 
 window.addEventListener("scroll", () => {
